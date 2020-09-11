@@ -9,11 +9,9 @@
 
 		<div ng-app = "" ng-init = "states = [{name:'California',capital:'Sacremento'}, 
 			{name:'Washington',capital:'Olympia'}, {name:'Utah',capital:'Salt Lake City'}]"> 
-			<p>Input some text <input type = "text" ng-model = "name"></p>
 			 
-			 
-			<p>Using <em>ng-bind</em> to bind data from input here:<br/>
-			Your input is: <span ng-bind = "name"></span>.</p>
+			<p>Using <em>ng-bind</em> to bind data from input: <input type = "text" ng-model = "name"><br/>
+			Data-binding with <em>ng-bind</em>: <span ng-bind = "name"></span>.</p>
 			<p>Listing capital city and state using <em>ng-repeat</em>:
 			 
 			<ul>
