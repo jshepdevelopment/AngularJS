@@ -1,6 +1,6 @@
 <html>
    <head>
-		<link href="css/styles.css" rel="stylesheet" />
+		<link href="./css/styles.css" rel="stylesheet" />
 		<title>AngularJS Directives Demonstration</title>
    </head>
    
@@ -14,11 +14,11 @@
 			 
 			<p>Using <em>ng-bind</em> to bind data from input here:<br/>
 			Your input is: <span ng-bind = "name"></span>.</p>
-			<p>Listing cities with capitals using <em>ng-repeat</em>:
+			<p>Listing capital city and state using <em>ng-repeat</em>:
 			 
 			<ul>
 				<li ng-repeat = "state in states">
-					{{ 'State: ' + state.name + ', Capital: ' + state.capital }}
+					{{ state.capital + ', ' + state.name }}
 				</li>
 			</ul>
 		</div>
