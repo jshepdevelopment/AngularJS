@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>AngularJS Controller Demonstration</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+   </head>
+   
+   <body>
+      <h2>AngularJS Controller Demonstration</h2>
+      
+      <div ng-app = "controllerApp" ng-controller = "itemController">
+         Item Name: <input type = "text" ng-model = "item.name"><br>
+         <br>
+         Item Description: <input type = "text" ng-model = "item.description"><br>
+         <br>
+         {{item.completeDescription()}}
+      </div>
+      
+      <script>
+         var controllerApp = angular.module("controllerApp", []);
+         
+         controllerApp.controller('itemController', function($scope) {
+            $scope.item = {
+               name: "Handbag",
+               description: "Michael Kors Blue Satchel - Medium",
+               
+               completeDescription: function() {
+                  var itemObject;
+                  itemObject = $scope.item;
+                  return itemObject.name + " " + itemObject.description;
+               }
+            };
+         });
+      </script>
+      
+   </body>
+</html>
